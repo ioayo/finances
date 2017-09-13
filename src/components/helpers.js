@@ -1,3 +1,3 @@
 export function calculate(goodsPrice, monthlyIncoming) {
-  (monthlyIncoming / 2629000) / goodsPrice;
+  return (monthlyIncoming / 2629000) / goodsPrice;
 }
