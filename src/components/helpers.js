@@ -1,5 +1,1 @@
-export function calculate(goodsPrice, monthlyIncoming) {
-    const secInMonth = 2629000;
-    const goodsPerSec = (monthlyIncoming / secInMonth) / goodsPrice;
-    return goodsPerSec;
-}
+export const calculate = (goodsPrice, monthlyIncoming) => (monthlyIncoming / 2629000) / goodsPrice;
