@@ -4,12 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!-- <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'> -->
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,7 +24,37 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    asdasd
+      <div class='container'>
+        <h1 class="title">Сколько бургеров в час вы зарабатываете?</h1>
+        <ul class='finances__list'>
+          <li class='finances__item'>
+            <h3 class="person">Программист</h3>
+            <p class="money-per-month">50000 рублей в месяц</p>
+            <ul class='goods__list'>
+              <li class='goods__item'>
+                <div class='goods__img'>
+                  <img src="%PUBLIC_URL%/img/004-hamburger.png" alt='' class='img-responsive'>
+                </div>
+                <div class="goods__text">
+                  <span class='goods__name'>Гамбургер</span>
+                  <span class='goods__price'>200 руб.</span>
+                  <span class='goods__calculate'>0.001</span>
+                </div>
+              </li>
+              <li class='goods__item'>
+                <div class='goods__img'>
+                  <img src="%PUBLIC_URL%/img/004-hamburger.png" alt='' class='img-responsive'>
+                </div>
+                <div class="goods__text">
+                  <span class='goods__name'>Гамбургер</span>
+                  <span class='goods__price'>200000000 руб.</span>
+                  <span class='goods__calculate'>0.001</span>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
