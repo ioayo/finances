@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FinanceList from './components/financeList'
-import { calculate } from './components/helpers';
 
 const PERSONS = [
     {
@@ -30,12 +29,37 @@ const PERSONS = [
     }    
 ]
 
+const GOODS = [
+    {
+        name: 'Гамбургер',
+        price: 200,
+        imgSrc: '004-hamburger'
+    },
+    {
+        name: 'iPhone',
+        price: 30000,
+        imgSrc: '003-iphone'
+    },
+    {
+        name: 'Тачка',
+        price: 300000,
+        imgSrc: '002-automobile'
+        
+    },
+    {
+        name: 'Дом',
+        price: 2000000,
+        imgSrc: '001-home'
+        
+    }
+]
+
 class App extends React.Component {
   render() {
     return (
         <div className="container">
             <h1 className="title">{this.props.title}</h1>
-            <FinanceList persons={PERSONS} />
+            <FinanceList persons={PERSONS} goods={GOODS} />
         </div>
     );
   }

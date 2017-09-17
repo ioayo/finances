@@ -4,5 +4,5 @@ import './App.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App title="Сколько бургеров вы зарабатываете в секунду?" />, document.getElementById('root'));
+ReactDOM.render(<App title="Сколько бургеров вы зарабатываете в день?" />, document.getElementById('root'));
 registerServiceWorker();
