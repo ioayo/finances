@@ -9,9 +9,9 @@ class FinanceItem extends React.Component {
                 <h3 className="person">{this.props.name}</h3>
                 <p className="money-per-month">Зарплата: {this.props.money} руб/месяц</p>
                 <ul className="goods__list">
-                    {this.props.goods.map((good)=>{
+                    {this.props.goods.map((good, index)=>{
                         return (
-                            <GoodsItem imgSrc={good.imgSrc} name={good.name} price={good.price} goodPerSec={calculate(good.price, this.props.money)}/>
+                            <GoodsItem key={index} imgSrc={good.imgSrc} name={good.name} price={good.price} goodPerSec={calculate(good.price, this.props.money)}/>
                         )
                     })}
                 </ul>
