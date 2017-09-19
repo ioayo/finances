@@ -9,14 +9,16 @@ class GoodsItem extends React.Component {
         }
     }
 
-    goodsPerSecCalculate(props) {
-        this.setState({
+    goodsPerSecCalculate(props,sec) {
+        this.setState({ 
             goodPerSec: this.state.goodPerSec + this.props.goodPerSec
         })
     }
+
     componentDidMount() {
         setInterval(this.goodsPerSecCalculate, 1000)
     }
+
     render() {
         return(
             <li className="goods__item">

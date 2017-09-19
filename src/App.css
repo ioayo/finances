@@ -101,3 +101,19 @@ h1,h2,h3,h4,h5,p,span {
   margin-bottom: 25px;
 }
 
+.set-days {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.set-days span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.set-days input {
+  border: none;
+  padding: 10px;
+}
