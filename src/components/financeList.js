@@ -10,7 +10,7 @@ class FinanceList extends React.Component {
             <ul className="finances__list">
                 {this.props.persons.map((person, index)=>{
                     return (
-                        <FinanceItem key={index} name={person.name} money={person.money} goods={this.props.goods} seconds={this.props.seconds}/>
+                        <FinanceItem time={this.props.time} key={index} name={person.name} money={person.money} goods={this.props.goods} seconds={this.props.seconds}/>
                     )
                 })}
             </ul>

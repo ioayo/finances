@@ -11,7 +11,12 @@ class FinanceItem extends React.Component {
                 <ul className="goods__list">
                     {this.props.goods.map((good, index)=>{
                         return (
-                            <GoodsItem key={index} imgSrc={good.imgSrc} name={good.name} price={good.price} goodPerSec={calculate(good.price, this.props.money)}/>
+                            <GoodsItem time={this.props.time} 
+                                       key={index} 
+                                       imgSrc={good.imgSrc} 
+                                       name={good.name} 
+                                       price={good.price} 
+                                       goodPerSec={calculate(good.price, this.props.money)}/>
                         )
                     })}
                 </ul>

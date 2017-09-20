@@ -106,6 +106,10 @@ h1,h2,h3,h4,h5,p,span {
   margin-bottom: 25px;
 }
 
+.set-days p {
+  margin-bottom: 25px;
+}
+
 .set-days span {
   font-size: 24px;
   font-weight: bold;
@@ -114,6 +118,20 @@ h1,h2,h3,h4,h5,p,span {
 }
 
 .set-days input {
+  display: inline-block;
   border: none;
-  padding: 10px;
+  padding: 10px 25px;
+  width: 15%;
+  margin-right: 10px;
+  outline: none;
+}
+
+.set-days button {
+  margin-top: 25px;
+  display: inline-block;
+  border: none;
+  background-color: green;
+  color: #fff;
+  padding: 10px 25px;
+  cursor: pointer;
 }

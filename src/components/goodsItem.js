@@ -3,20 +3,15 @@ import React from 'react';
 class GoodsItem extends React.Component {
     constructor(props) {
         super(props);
-        this.goodsPerSecCalculate = this.goodsPerSecCalculate.bind(this);
-        this.state = {
-            goodPerSec: props.goodPerSec,
-        }
-    }
-
-    goodsPerSecCalculate(props,sec) {
-        this.setState({ 
-            goodPerSec: this.state.goodPerSec + this.props.goodPerSec
-        })
     }
 
     componentDidMount() {
-        setInterval(this.goodsPerSecCalculate, 1000)
+    }
+    
+    updateCalculate(n) {
+        const time = this.props.time, 
+        goodPerSec = this.props.goodPerSec;
+        return (time/1000 * this.props.goodPerSec).toFixed(n);
     }
 
     render() {
@@ -28,7 +23,7 @@ class GoodsItem extends React.Component {
                 <div className="goods__text">
                   <span className='goods__name'>{this.props.name}</span>
                   <span className='goods__price'>Цена {this.props.price} руб.</span>
-                  <span className='goods__calculate'>{this.state.goodPerSec.toFixed(4)}</span>
+                  <span className='goods__calculate'>{this.updateCalculate(4)}</span>
                 </div>
             </li>
         )
