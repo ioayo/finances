@@ -85,11 +85,13 @@ class App extends React.Component {
   }
 
   secondsToString(seconds) {
-    var numdays = Math.floor(seconds / 86400);
-    var numhours = Math.floor((seconds % 86400) / 3600);
-    var numminutes = Math.floor(((seconds % 86400) % 3600) / 60);
-    var numseconds = ((seconds % 86400) % 3600) % 60;
-    return numdays + " Дней " + numhours + " Часов " + numminutes + " Минут " + numseconds + " Секунд";
+    const numyears = Math.floor(seconds/31536000);
+    const nummonths = Math.floor((seconds % 31536000) / 2592000);
+    const numdays = Math.floor(((seconds % 31536000) % 2592000) / 86400);
+    const numhours = Math.floor((seconds % 86400) / 3600);
+    const numminutes = Math.floor(((seconds % 86400) % 3600) / 60);
+    const numseconds = ((seconds % 86400) % 3600) % 60;
+    return numyears + " Лет "  + nummonths + " Месяцев " + numdays + " Дней " + numhours + " Часов " + numminutes + " Минут " + numseconds + " Секунд";
   }
   
   handleChange(e){
@@ -103,8 +105,7 @@ class App extends React.Component {
   toTheFuture(e) {
     e.preventDefault();
     const future = this.state.future;
-    console.log(future);
-    const secondsValue = (future.years * 31104000 + future.months * 2592000 + future.days * 86400 + future.hours * 3600 + future.minutes * 60) * 1000;
+    const secondsValue = (future.years * 31536000 + future.months * 2592000 + future.days * 86400 + future.hours * 3600 + future.minutes * 60) * 1000;
     this.setState({
       elapsedTime: secondsValue
     })
