@@ -1,16 +1,9 @@
 import React from 'react';
 
 class GoodsItem extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-    }
     
     updateCalculate(n) {
-        const time = this.props.time, 
-        goodPerSec = this.props.goodPerSec;
+        const time = this.props.time;
         return (time/1000 * this.props.goodPerSec).toFixed(n);
     }
 
