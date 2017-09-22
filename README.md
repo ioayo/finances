@@ -1,4 +1,3 @@
 # Burgers Per Second
 
-### Мой первый опыт работы с react
-
+### Проба пера на библиотеке React. Just for fun & experience
