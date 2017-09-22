@@ -12,7 +12,7 @@ class AddPerson extends React.Component {
 
 
 	onPersonChange(e) {
-		let name = e.target.value, key = e.target.name;
+		let key = e.target.name;
 		let newState = this.state;
 		newState[key] = e.target.value
 		this.setState(newState);
@@ -25,9 +25,13 @@ class AddPerson extends React.Component {
 				<form onSubmit={(e) => {
 					e.preventDefault();
 					this.props.addPerson(this.state);
+					this.setState({
+						money: 0,
+						name: ''
+					})
 				}}> 
-					<input ref="name" onChange={this.onPersonChange} name="name" type="text" placeholder="Имя" />
-					<input ref="money" onChange={this.onPersonChange} name="money" type="number" />
+					<input value={this.state.name} onChange={this.onPersonChange} name="name" type="text" placeholder="Имя" />
+					<input value={this.state.money} onChange={this.onPersonChange} name="money" type="number" />
 					<button type="submit">Добавить</button>
 				</form>
 			</div>

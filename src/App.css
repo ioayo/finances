@@ -27,6 +27,7 @@ h1,h2,h3,h4,h5,p,span {
 .container {
   padding: 50px 0;
   width: 90%;
+  min-width: 1200px;
   margin: 0 auto;
 }
 
@@ -40,7 +41,7 @@ h1,h2,h3,h4,h5,p,span {
 .finances__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
 }
 .finances__item {
@@ -121,7 +122,6 @@ h1,h2,h3,h4,h5,p,span {
   display: inline-block;
   border: none;
   padding: 10px 25px;
-  width: 15%;
   margin-right: 10px;
   outline: none;
 }
@@ -129,6 +129,42 @@ h1,h2,h3,h4,h5,p,span {
 .set-days button {
   margin-top: 25px;
   display: inline-block;
+  border: none;
+  background-color: green;
+  color: #fff;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.forms {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.forms .set-days {
+  width: 60%;
+}
+
+.forms .set-days input {
+  width: 10%;
+}
+.add-person p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.add-person input {
+  width: 70%;
+  margin-bottom: 15px;
+  border: none;
+  padding: 10px 25px;
+  outline: none;
+}
+
+.add-person  button {
+  display: inline-block;
+  width: 50%;
   border: none;
   background-color: green;
   color: #fff;
