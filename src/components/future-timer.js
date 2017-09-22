@@ -8,8 +8,8 @@ class FutureTimer extends React.Component {
 	render() {
 		return (
 			<div className="set-days">
-				<span>Вперед в будущее или прошлое!</span>
-				<p>Установите время и узнайте за какое время вы заработаете себе на новенький айфон!</p>
+				<span>{this.props.title}</span>
+				<p>{this.props.descr}</p>
 				<form onSubmit={this.props.toTheFuture}>	
 					<input onChange={this.props.handleChange} value={this.props.time.years ? parseInt(this.props.time.years, 10) : '' } type="number" name="years" min="1" placeholder="Годы" />
 					<input onChange={this.props.handleChange} value={this.props.time.months ? parseInt(this.props.time.months, 10) : '' } type="number" name="months" min="1" max="12" placeholder="Месяцы"/>
