@@ -11,7 +11,7 @@ class GoodsItem extends React.Component {
         return(
             <li className="goods__item">
                 <div className="goods__img">
-                    <img src={'/img/' + this.props.imgSrc + '.png'} alt={this.props.name} className="img-responsive" />
+                    <img src={'img/' + this.props.imgSrc + '.png'} alt={this.props.name} className="img-responsive" />
                 </div>
                 <div className="goods__text">
                   <span className='goods__name'>{this.props.name}</span>
